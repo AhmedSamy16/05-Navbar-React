@@ -1,0 +1,124 @@
+nav {
+    background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+h1 {
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+}
+
+.react-icon {
+    width: 25px;
+    margin-left: 0.5rem;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 10px;
+    justify-content: end;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    margin-right: 2rem;
+}
+
+.nav-links {
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+    border-radius: 15px;
+    background-color: #6d76f7;
+    transition: all 0.3s ease;
+}
+
+.nav-links-mobile {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon img {
+    width: 40px;
+}
+
+
+@media screen and (max-width: 960px) {
+    nav {
+        position: relative;
+    }
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 540px;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        transition: all 0.3s ease;
+    }
+    .nav-menu.active {
+        background-color: #6668f4;
+        left: 0;
+        z-index: 1;
+    }
+    .nav-links {
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    .nav-logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(25%, 70%);
+    }
+    Button {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 50%);
+        filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(198deg) brightness(114%) contrast(101%);
+    }
+    img.close {
+        width: 28px;
+        transform: translate(-80%, 40%);
+    }
+    .nav-links-mobile {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 80%;
+        background: #4ad9e4;
+        color: #fff;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+    }
+    .nav-links-mobile:hover {
+        background-color: #fff;
+        color: #6568f4;
+    }
+}

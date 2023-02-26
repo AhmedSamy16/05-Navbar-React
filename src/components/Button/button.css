@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #3acbf7;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+}
+
+.btn:hover {
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    background: white;
+    color: #6568f4;
+}
